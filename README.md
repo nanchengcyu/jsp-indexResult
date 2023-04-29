@@ -29,6 +29,7 @@ git config --global --add safe.directory “+目录”<br><br>
 ![图片](https://user-images.githubusercontent.com/104661473/235287373-4f2fc8e6-b401-4941-bd05-ca6a7fcc4653.png)<br>
 
 项目运行成功截图:<br>
-![图片](https://user-images.githubusercontent.com/104661473/235287439-9012ec60-3639-4e63-82f3-1b2b3c6ddd18.png)<br>
+![图片](https://user-images.githubusercontent.com/104661473/235288157-668f5604-b283-4b8c-8fa5-088191cb1506.png)
+<br>
 ![图片](https://user-images.githubusercontent.com/104661473/235287497-e639d25c-6a60-4a18-8ef7-f437367f49a0.png)
 <br>

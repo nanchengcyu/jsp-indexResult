@@ -1,4 +1,13 @@
 # jsp-indexResult
+
+
+修改后的页面效果(文末最后有以前的效果)
+index.jsp
+![ff3a0df4ce390f64c9777b100350cc0](https://github.com/nanchengcyu/jsp-indexResult/assets/104661473/3caa6e0e-b62b-48dd-b0f1-9bbed5524527)
+result.jsp
+![d00b4495559b287040e6637995efb40](https://github.com/nanchengcyu/jsp-indexResult/assets/104661473/173b0311-0c07-4e49-924c-6003c2127b4c)
+
+----------------------------------------------------------------------------------------------------------------------------
 每次上传项目到GitHub总会遇到不一样的问题，还好这次解决的很快，没有昨天那么慢<br>
 记录下这次遇到的解决方法 <br>
 问题报错图片：<br>

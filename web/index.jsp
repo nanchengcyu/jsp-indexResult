@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <!-- 引入Bootstrap样式表 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <script>
         // 定义各个学院的系别和专业
         const departmentData = {
-            '工学院': ['机械工程系', '电子工程系', '计算机工程系'],
+            '计算机与软件工程学院': ['机械工程系', '电子工程系', '计算机工程系'],
             '文学院': ['中文系', '英语系', '翻译系']
         };
         const majorData = {
@@ -60,6 +62,7 @@
                 }
             }
         }
+
         //时间
         var t = null;
         t = setTimeout(time, 1000); //開始运行
@@ -79,7 +82,7 @@
                 mt +
                 "月" +
                 day +
-                "-" +
+                "日" +
                 h +
                 "时" +
                 m +
@@ -91,52 +94,92 @@
     </script>
 </head>
 <body>
-<div class="showTime" style="color: teal"></div>
-
-<form action="result.jsp" method="post">
-    <label for="username">用户名:</label>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">密码:</label>
-    <input type="password" id="password" name="password"><br>
-    <label for="confirm_password">确认密码:</label>
-    <input type="password" id="confirm_password" name="confirm_password"><br>
-    <label>性别：</label>
-    <input name="sex" type="radio" value="男"/>男
-    <input name="sex" type="radio" value="女"/>女<br/>
-    <label >爱好:</label>
-    <input name="like" type="checkbox" value="唱歌跳舞"/>唱歌跳舞
-    <input name="like" type="checkbox" value="上网冲浪"/>上网冲浪
-    <input name="like" type="checkbox" value="户外登山"/>户外登山
-    <input name="like" type="checkbox" value="体育运动"/>体育运动
-    <input name="like" type="checkbox" value="读书看报"/>读书看报
-    <input name="like" type="checkbox" value="欣赏电影"/>欣赏电影
-    <br/>
-    <label for="email">邮箱:</label>
-    <input type="email" id="email" name="email"><br>
-    <label>学院：</label>
-    <select id="college" name="college" onchange="updateDepartments()">
-        <option value="">请选择</option>
-        <option value="工学院">工学院</option>
-        <option value="文学院">文学院</option>
-    </select>
-    <br/>
-    <label>系别：</label>
-    <select id="department" name="department" onchange="updateMajors()">
-        <option value="">请选择</option>
-    </select>
-    <br/>
-    <label>专业：</label>
-    <select id="major" name="major">
-        <option value="">请选择</option>
-    </select>
-    <br>
-    <label for="introduction">个人简介:</label>
-    <textarea id="introduction" name="introduction"></textarea><br>
-    <input type=submit name=submit value=提交 />
-
-</form>
+<div class="container mt-4">
+    <h3> <div class="showTime" style="color: teal"></div></h3>
+    <h3 style="color:teal">使用bootstrap框架 + JS背景：樱花写此页面 </h3>
+    <form action="result.jsp" method="post">
+        <div class="mb-3">
+            <label for="username" class="form-label">用户名:</label>
+            <input type="text" id="username" name="username" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">密码:</label>
+            <input type="password" id="password" name="password" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">确认密码:</label>
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">性别：</label>
+            <div class="form-check form-check-inline">
+                <input name="sex" type="radio" value="男" class="form-check-input">
+                <label class="form-check-label">男</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="sex" type="radio" value="女" class="form-check-input">
+                <label class="form-check-label">女</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">爱好:</label>
+            <div class="form-check form-check-inline">
+                <input name="like" type="checkbox" value="唱歌跳舞" class="form-check-input">
+                <label class="form-check-label">唱歌跳舞</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="like" type="checkbox" value="上网冲浪" class="form-check-input">
+                <label class="form-check-label">上网冲浪</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="like" type="checkbox" value="户外登山" class="form-check-input">
+                <label class="form-check-label">户外登山</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="like" type="checkbox" value="体育运动" class="form-check-input">
+                <label class="form-check-label">体育运动</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="like" type="checkbox" value="读书看报" class="form-check-input">
+                <label class="form-check-label">读书看报</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input name="like" type="checkbox" value="欣赏电影" class="form-check-input">
+                <label class="form-check-label">欣赏电影</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">邮箱:</label>
+            <input type="email" id="email" name="email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">学院：</label>
+            <select id="college" name="college" onchange="updateDepartments()" class="form-select">
+                <option value="">请选择</option>
+                <option value="计算机与软件工程学院">计算机与软件工程学院</option>
+                <option value="文学院">文学院</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">系别：</label>
+            <select id="department" name="department" onchange="updateMajors()" class="form-select">
+                <option value="">请选择</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">专业：</label>
+            <select id="major" name="major" class="form-select">
+                <option value="">请选择</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="introduction" class="form-label">个人简介:</label>
+            <textarea id="introduction" name="introduction" class="form-control"></textarea>
+        </div>
+        <input type=submit name=submit value=提交 class="btn btn-primary">
+    </form>
+</div>
 
 <script src="bg.js"></script>
 </body>
-
 </html>
